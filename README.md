@@ -72,4 +72,11 @@ sudo ufw allow http
 sudo ufw allow https
 sudo ufw enable
 ```
- 
+
+## Add ssh-key deploy to Github
+
+```
+ssh-keygen
+```
+
+Copy `.pub` to Github section of the project

@@ -77,6 +77,27 @@ sudo ufw allow 'Apache Full'
 sudo ufw enable
 ```
 
+## Node
+
+```
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1<version>/install.sh | bash
+
+# copy as 2 lines
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+Any trouble to find nvm command:
+
+```
+source ~/.bashrc
+
+or
+
+source ~/.nvm/nvm.sh
+```
+
+
 ## Add ssh-key deploy to Github
 
 ```

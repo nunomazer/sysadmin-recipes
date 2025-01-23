@@ -4,9 +4,11 @@
 
 **Ad user**
 
-`adduser newuser`
+`adduser <newuser>`
 
-**Edit sudoers**
+`usermod -aG sudo <newuser>`
+
+OR Edit sudoers
 
 `visudo`
 

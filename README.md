@@ -69,9 +69,9 @@ sudo apt-get install ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow OpenSSH
-sudo ufw allow 'Apache'
 sudo ufw allow http
 sudo ufw allow https
+sudo ufw allow 'Apache Full'
 sudo ufw enable
 ```
 
@@ -98,3 +98,9 @@ rm installer
 ```
 sudo apt install certbot python3-certbot-apache
 
+# check is running
+sudo systemctl status certbot.timer
+
+# check autorenew
+sudo certbot renew --dry-run
+```

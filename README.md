@@ -27,6 +27,14 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install apache2
 ```
+## MariaDB
+
+```
+sudo apt install mariadb-server
+sudo mysql_secure_installation
+sudo systemctl start mariadb.service
+sudo systemctl status mariadb
+```
 
 ## ufw Firewall
 

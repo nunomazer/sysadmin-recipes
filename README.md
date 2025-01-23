@@ -152,6 +152,7 @@ FLUSH PRIVILEGES;
 SHOW GRANTS FOR 'user1'@localhost;
 ```
 
+### Laravel steps
 
 - git clone
 - composer install

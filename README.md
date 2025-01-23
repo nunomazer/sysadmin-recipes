@@ -85,8 +85,6 @@ ssh-keygen
 
 Copy `.pub` to Github section of the project
 
-- Gt clone the project
-
 ## Composer
 
 ```
@@ -106,3 +104,10 @@ sudo systemctl status certbot.timer
 # check autorenew
 sudo certbot renew --dry-run
 ```
+
+## Laravel project
+
+- git clone
+- composer install
+- cp .env.example .env
+- chown -R <user>:www-data .   

@@ -80,3 +80,14 @@ ssh-keygen
 ```
 
 Copy `.pub` to Github section of the project
+
+- Gt clone the project
+
+## Composer
+
+```
+wget https://getcomposer.org/installer
+sudo php installer --install-dir=/usr/local/bin --filename=composer
+rm installer
+```
+

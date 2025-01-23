@@ -130,6 +130,29 @@ sudo certbot renew --dry-run
 
 ## Laravel project
 
+### Mariadb database and user
+
+```
+sudo mysql -u root
+
+#or
+
+sudo mysql -u root -p
+```
+
+```
+CREATE DATABASE 'yourDB';
+SHOW DATABASES;
+
+CREATE USER 'user1'@localhost IDENTIFIED BY 'password1';
+SELECT User FROM mysql.user;
+
+GRANT ALL PRIVILEGES ON yourdb.* TO 'user1'@localhost;
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'user1'@localhost;
+```
+
+
 - git clone
 - composer install
 - cp .env.example .env

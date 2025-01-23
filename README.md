@@ -26,6 +26,8 @@ newuser ALL=(ALL:ALL) ALL
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install apache2
+sudo a2enmod rewrite
+sudo systemctl restart apache2
 ```
 ## MariaDB
 

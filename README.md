@@ -30,7 +30,9 @@ sudo apt-get upgrade
 sudo apt-get install apache2
 sudo a2enmod rewrite
 sudo systemctl restart apache2
+sudo adduser <user> www-data
 ```
+
 ## MariaDB
 
 ```

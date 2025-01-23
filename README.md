@@ -36,6 +36,23 @@ sudo systemctl start mariadb.service
 sudo systemctl status mariadb
 ```
 
+## PHP
+
+```
+sudo apt-get install -y php php-cli php-mysql php-mbstring php-bcmath php-zip php-gd php-curl php-xml php-intl php-fpm
+ls /etc/php/8.3/
+cd /etc/php/8.3/fpm/pool.d/
+sudo nano www.conf
+
+user = www-data
+group = www-data
+
+listen = /run/php/php8.3-fpm.sock
+
+sudo systemctl restart php8.3-fpm
+
+```
+
 ## ufw Firewall
 
 ```

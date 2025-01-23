@@ -93,3 +93,8 @@ sudo php installer --install-dir=/usr/local/bin --filename=composer
 rm installer
 ```
 
+## SSL - HTTPS - Certbot
+
+```
+sudo apt install certbot python3-certbot-apache
+

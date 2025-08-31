@@ -221,3 +221,7 @@ server {
         }
 }
 ```
+
+```bash
+systemctl reload nginx
+```

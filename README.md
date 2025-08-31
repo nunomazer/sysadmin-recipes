@@ -186,8 +186,12 @@ rm installer
 
 ## SSL - HTTPS - Certbot
 
-```
-sudo apt install certbot python3-certbot-apache
+```bash
+sudo apt install certbot
+# for apache
+sudo apt python3-certbot-apache
+# for nginx
+sudo apt python3-certbot-nginx
 
 # check is running
 sudo systemctl status certbot.timer

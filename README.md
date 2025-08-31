@@ -28,6 +28,12 @@ newuser ALL=(ALL:ALL) ALL
 
 ## Nginx
 
+```bash
+sudo apt update
+sudo apt install nginx
+systemctl status nginx
+```
+
 ### References
 
 - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
@@ -85,12 +91,14 @@ Save and run
 
 ```
 sudo apt-get install ufw
+sudo ufw app list
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow OpenSSH
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 'Apache Full'
+sudo ufw allow 'Nginx Full'
 sudo ufw enable
 ```
 

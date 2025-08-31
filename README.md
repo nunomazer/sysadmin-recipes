@@ -182,4 +182,42 @@ SHOW GRANTS FOR 'user1'@localhost;
 - git clone
 - composer install
 - cp .env.example .env
-- chown -R <user>:www-data .   
+- chown -R <user>:www-data .
+
+## Nginx server block
+
+```bash
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name DOMAIN;
+
+        root /var/www/PROJECT/public;
+
+        index index.php;
+
+        access_log /var/log/nginx/DOMAIN-access.log;
+        error_log  /var/log/nginx/DOMAIN-error.log error;
+
+        location / {
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location = /favicon.ico { access_log off; log_not_found off; }
+        location = /robots.txt  { access_log off; log_not_found off; }
+
+        error_page 404 /index.php;
+
+        location ~ \.php$ {
+                fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+                include fastcgi_params;
+        }
+
+        location ~ /\.(?!well-known).* {
+                deny all;
+        }
+}
+```

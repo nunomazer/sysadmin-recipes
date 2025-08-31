@@ -239,9 +239,34 @@ SHOW GRANTS FOR 'user1'@localhost;
 
 ### Laravel steps
 
-- git clone
-- composer install
-- cp .env.example .env
-- chown -R <user>:www-data .
+```bash
+git clone
 
+cd <project/root>
+
+composer install
+
+cp .env.example .env
+```
+
+#### Review user privilegies and owner
+
+```bash
+sudo chown -R www-data:www-data ./
+
+sudo usermod -a -G www-data <deployuser>
+
+sudo chown -R $USER:www-data .
+
+sudo find . -type f -exec chmod 664 {} \;   
+sudo find . -type d -exec chmod 775 {} \;
+
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
+```
+
+##### References
+
+- https://stackoverflow.com/questions/30639174/how-to-set-up-file-permissions-for-laravel
 

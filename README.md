@@ -148,7 +148,7 @@ sudo ufw status
 ## Node
 
 ```
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1<version>/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.<version>/install.sh | bash
 
 # copy as 2 lines
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

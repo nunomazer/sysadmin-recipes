@@ -54,6 +54,8 @@ sudo adduser <user> www-data
 
 ```
 sudo apt install mariadb-server
+# to install compatible secure tool
+sudo apt install mariadb-client-compat
 sudo mysql_secure_installation
 sudo systemctl start mariadb.service
 sudo systemctl status mariadb

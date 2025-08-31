@@ -189,14 +189,14 @@ rm installer
 ```bash
 sudo apt install certbot
 # for apache
-sudo apt python3-certbot-apache
+sudo apt install python3-certbot-apache
 # for nginx
-sudo apt python3-certbot-nginx
+sudo apt install python3-certbot-nginx
 
-# check is running
+# check is running and auto rebew
 sudo systemctl status certbot.timer
 
-# check autorenew
+# check autorenew wil run ok
 sudo certbot renew --dry-run
 ```
 

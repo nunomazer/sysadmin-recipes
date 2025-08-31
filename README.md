@@ -142,6 +142,7 @@ sudo ufw allow https
 sudo ufw allow 'Apache Full'
 sudo ufw allow 'Nginx Full'
 sudo ufw enable
+sudo ufw status
 ```
 
 ## Node

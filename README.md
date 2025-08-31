@@ -206,14 +206,23 @@ sudo certbot renew --dry-run
 
 ## Laravel project
 
-### Mariadb database and user
+### Mysql / Mariadb database and user
 
 ```
+# mysql
 sudo mysql -u root
 
-#or
+# mariadb
+sudo mariadb -u root
 
+# or to enter password
+
+# mysql
 sudo mysql -u root -p
+
+# mariadb
+sudo mariadb -u root -p
+
 ```
 
 ```

@@ -22,6 +22,12 @@ root    ALL=(ALL:ALL) ALL
 
 newuser ALL=(ALL:ALL) ALL
 
+## Nginx
+
+### References
+
+- https://www.digitalocean.com/community/tutorials/php-fpm-nginx
+
 ## Apache2
 
 ```

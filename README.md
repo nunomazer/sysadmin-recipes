@@ -26,7 +26,7 @@ newuser ALL=(ALL:ALL) ALL
 
 ### References
 
-- https://www.digitalocean.com/community/tutorials/php-fpm-nginx
+
 
 ## Apache2
 
@@ -69,6 +69,12 @@ listen = /run/php/php8.3-fpm.sock
 Save and run
 
 `sudo systemctl restart php8.3-fpm`
+
+### PHP-FPM x Nginx
+
+#### References 
+
+- https://www.digitalocean.com/community/tutorials/php-fpm-nginx
 
 ## ufw Firewall
 

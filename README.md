@@ -196,6 +196,9 @@ sudo apt install python3-certbot-nginx
 # check is running and auto rebew
 sudo systemctl status certbot.timer
 
+# create ssl for all nginx domains
+sudo certbot --nginx
+
 # check autorenew wil run ok
 sudo certbot renew --dry-run
 ```

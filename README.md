@@ -147,6 +147,8 @@ sudo ufw status
 
 ## Node
 
+> See the correct version of NVM here https://github.com/nvm-sh/nvm
+ 
 ```
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.<version>/install.sh | bash
 

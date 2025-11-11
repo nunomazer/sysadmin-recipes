@@ -234,7 +234,12 @@ sudo mariadb -u root -p
 CREATE DATABASE 'yourDB';
 SHOW DATABASES;
 
+# User creation alternatives
 CREATE USER 'user1'@localhost IDENTIFIED BY 'password1';
+
+# Or
+CREATE USER 'user1'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('password1');
+
 SELECT User FROM mysql.user;
 
 GRANT ALL PRIVILEGES ON yourdb.* TO 'user1'@localhost;
